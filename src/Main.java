@@ -37,7 +37,6 @@ public class Main {
         }
     }
 
-    // Задание 1: Реализация базы данных как Singleton
     static class DatabaseConnection {
         private static DatabaseConnection instance;
 
@@ -60,7 +59,6 @@ public class Main {
         System.out.println("Сравнение объектов connection1 и connection2: " + (connection1 == connection2));
     }
 
-    // Задание 2: Реализация системы логирования как Singleton
     static class Logger {
         private static Logger instance;
         private List<String> logs = new ArrayList<>();
@@ -97,7 +95,6 @@ public class Main {
         logger.printLogs();
     }
 
-    // Задание 3: Реализация статусов заказа (Enum)
     enum OrderStatus {
         NEW, IN_PROGRESS, DELIVERED, CANCELLED
     }
@@ -130,10 +127,9 @@ public class Main {
         System.out.println("Статус заказа после изменения: " + order.getStatus());
         order.setStatus(OrderStatus.DELIVERED);
         System.out.println("Статус заказа после доставки: " + order.getStatus());
-        order.setStatus(OrderStatus.CANCELLED); // Ошибка при попытке отменить доставленный заказ
+        order.setStatus(OrderStatus.CANCELLED);
     }
 
-    // Задание 4: Реализация сезонов года (Enum)
     enum Season {
         WINTER, SPRING, SUMMER, AUTUMN;
 
